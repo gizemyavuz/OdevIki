@@ -27,7 +27,7 @@ class CevreHesaplama{
 
 let c = CevreHesaplama()
 c.cevre(kenar1: 10, kenar2: 20)
-/*
+
 //3. soru
 
 class FaktoriyelHesaplama{
@@ -35,31 +35,34 @@ class FaktoriyelHesaplama{
     var factoriyelSonucu = 1
     var sayi = 6
      
-    for i in 1..<sayi{
-        factoriyelSonucu *= i
+    func faktoriyel(num:Int)-> Int{
+        var res = 1
+        var n = num
+        while n>0{
+            res = res * n
+            n-=1
+        }
+        return res
     }
-    print(sayi,"Sayısının faktöriyeli = ", factoriyelSonucu)
                 
         
     
 }
  
-*/
 
 //4. soru
 
 class HarfAdet{
     
-    func hesap(harf: String,kelime:String){
-        
-        for harf in kelime{
-            
-            print(harf)
-        }
-                
-        
-    }
-}
+    func wordKey(word:String, key : Character) -> Int {
+            var count = 0
+            for i in word.indices{
+                if word[i] == key{
+                    count += 1
+                }
+            }
+            return count
+        }}
 
 //5.soru
 
@@ -79,19 +82,27 @@ i.aci(kenar: 4)
 
 class MaasHesabi{
     
-    func maas(gun:Int,saat:Int){
-        
-        var gunlukMaas = 8*10
-        
-        var toplamMaas = gunlukMaas*gun
-        
-        if(gun>20){
-         var mesaiSaati =  ( toplamMaas - 160 )/10
-            var mesaiUcreti = mesaiSaati*20
+    func wordKey(word:String, key : Character) -> Int {
+            var count = 0
+            for i in word.indices{
+                if word[i] == key{
+                    count += 1
+                }
+            }
+            return count
         }
-        
-    }
 }
 
 //7. soru
-
+class KotaHesabi{
+    
+    func wordKey(word:String, key : Character) -> Int {
+            var count = 0
+            for i in word.indices{
+                if word[i] == key{
+                    count += 1
+                }
+            }
+            return count
+        }
+}
